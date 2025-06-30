@@ -1,7 +1,9 @@
 from fastapi import FastAPI
-from api.v1.endpoints import test_routes
+from app.api.v1.endpoints import test_routes
 
-app = FastAPI(title="Auto Web App")
+app = FastAPI(title="Title tự đặt : 1Auto Web App")  # <- Biến 'app' phải tồn tại
 
-# Đăng ký router
-app.include_router(test_routes.router, prefix="/api/v1/test", tags=["Test"])
+app.include_router(test_routes.router, prefix="/api/v1/test2", tags=["Test"])
+
+
+# uvicorn app.main:app --reload
